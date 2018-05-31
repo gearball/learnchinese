@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab73a636a44437a43b367e1d9d607186, type: 3}
   m_Name: Configuration
   m_EditorClassIdentifier: 
+  pairedSFX: {fileID: 8300000, guid: 2be1c004f58d65b4fae7817bea591766, type: 3}
   flipForwardDistance: 0.5
   flipScale: 0.2
   flipDuration: 0.5

@@ -39,6 +39,10 @@ namespace LearnChinese {
     [SerializeField] float upDownTime = 1f;
     [Tooltip("UpDown animation distance")]
     [SerializeField] float upDownDistance = 1f;
+    [Tooltip("Scale animation value")]
+    [SerializeField] float scaleValue = 1f;
+    [Tooltip("Scale animation time duration")]
+    [SerializeField] float scaleTime = .5f;
 
     /// <summary>
     /// Current active UI.
@@ -127,7 +131,21 @@ namespace LearnChinese {
     /// </summary>
     /// <param name="paired">Number of card paired.</param>
     public static void SetPaired (int paired) {
-      Instance.txtMatches.SetText (string.Format ("Paired: {0}", paired));
+      Instance.setPaired (paired);
+    }
+
+    void setPaired (int paired, bool instance = false) {
+      txtMatches.SetText (string.Format ("Paired: {0}", paired));
+      int id = txtMatches.GetInstanceID ();
+      DOTween.Kill (id);
+      DOTween.Restart (id);
+      if (instance) {
+        txtMatches.transform
+          .DOScale (scaleValue, scaleTime)
+          .SetEase (Ease.Linear)
+          .SetLoops (2, LoopType.Yoyo)
+          .SetId (id);
+      }
     }
 
     /// <summary>

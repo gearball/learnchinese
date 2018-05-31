@@ -16,6 +16,19 @@ namespace LearnChinese {
       }
     }
 
+    [Header("Audio Setting")]
+    [Tooltip("Played when two card is paired.")]
+    [SerializeField] AudioClip pairedSFX;
+
+    /// <summary>
+    /// Audio clip when two card is paired.
+    /// </summary>
+    public static AudioClip PairedSFX {
+      get {
+        return Instance.pairedSFX;
+      }
+    }
+
     [Header("Animation Setting")]
     [Tooltip("How far the card move towards camera when flipped.")]
     [SerializeField] float flipForwardDistance = 1f;
@@ -23,6 +36,8 @@ namespace LearnChinese {
     [SerializeField] float flipScale = 1.5f;
     [Tooltip("How long flipping animation take.")]
     [SerializeField] float flipDuration = .5f;
+    [Tooltip("How long scale animation take.")]
+    [SerializeField] float scaleDuration = .5f;
 
     /// <summary>
     /// How far the card move towards camera when flipped. 
@@ -48,6 +63,15 @@ namespace LearnChinese {
     public static float FlipDuration {
       get {
         return Instance.flipDuration;
+      }
+    }
+
+    /// <summary>
+    /// How long flipping animation take. 
+    /// </summary>
+    public static float ScaleDuration {
+      get {
+        return Instance.scaleDuration;
       }
     }
 

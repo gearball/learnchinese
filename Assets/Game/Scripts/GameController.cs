@@ -107,6 +107,7 @@ namespace LearnChinese {
         for (int j = 0; j < gridSize.y; j++) {
           Card card = Instantiate<Card> (cardPrefab, new Vector3 ((gridCenter.x - i - .5f) * cardSpacing.x, (gridCenter.y - j - .5f) * cardSpacing.y), Quaternion.identity);
           card.SetDisplay (Configuration.CardsData [mode [k].Key], mode [k].Value);
+          card.Spawn (k * 0.1f);
           cards [k] = card;
           k++;
         }
@@ -142,17 +143,12 @@ namespace LearnChinese {
         AnimatePaired (flippedCards [0].gameObject);
         AnimatePaired (flippedCards [1].gameObject);
         totalPaired++;
-        UIController.SetPaired (totalPaired);
       } else {
         flippedCards [0].Flip ();
         flippedCards [1].Flip ();
       }
       flippedCards.Clear ();
       numCardFlipping = 0;
-
-      if (totalPaired == cards.Length / 2) {
-        UIController.ShowUI (UI.Result);
-      }
     }
 
     void AnimatePaired (GameObject card) {
@@ -164,8 +160,8 @@ namespace LearnChinese {
         .SetEase (Ease.InOutBack)
         .OnComplete (() => {
             card.GetComponent<Card> ().SetPinyin (false);
-          //TODO
-          //Add visual effects
+            VFXController.PlayVFX (VFX.Paired);
+          AudioController.PlayArea (Configuration.PairedSFX,2,4);
           }));
       scale.AppendInterval (displayTime);
       scale.Append (card.transform
@@ -181,7 +177,12 @@ namespace LearnChinese {
         .SetEase (Ease.InBack));
       move.OnComplete (() => {
           Destroy (card);
-        });
+          UIController.SetPaired (totalPaired);
+          if (totalPaired == cards.Length / 2) {
+            UIController.ShowUI (UI.Result);
+          }
+      });
+      AudioController.PlayArea (Configuration.PairedSFX,0,4);
       scale.Play ();
       move.Play ();
     }

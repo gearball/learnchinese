@@ -6,5 +6,13 @@
     Result
   }
 
+  public enum VFX {
+    Paired
+  }
+
+  public enum SFX {
+    Paired
+  }
+
 }
 

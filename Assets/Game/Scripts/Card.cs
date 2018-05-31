@@ -104,6 +104,16 @@ namespace LearnChinese {
       sprText.sprite = isPinyin ? cardData.sprPinyin : cardData.sprChinese;
     }
 
+    /// <summary>
+    /// Play spawn animation.
+    /// </summary>
+    public void Spawn (float delay = 0f) {
+      transform
+        .DOScale (Vector3.one, Configuration.ScaleDuration)
+        .ChangeStartValue (Vector3.zero)
+        .SetDelay (delay)
+        .SetEase (Ease.OutBack);
+    }
   }
 
 }
