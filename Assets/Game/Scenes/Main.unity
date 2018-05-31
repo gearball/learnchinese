@@ -2106,7 +2106,7 @@ MonoBehaviour:
   bgMoveTime: 20
   fadeTime: 1
   upDownTime: 5
-  upDownDistance: 50
+  upDownDistance: 200
   scaleValue: 1
   scaleTime: 0.5
 --- !u!4 &1552095146

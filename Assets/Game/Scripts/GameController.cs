@@ -155,6 +155,7 @@ namespace LearnChinese {
       Vector3 topCamera = Camera.main.ViewportToWorldPoint (new Vector3 (0.5f, 1f));
       topCamera.z = 0;
       Sequence scale = DOTween.Sequence ();
+      card.GetComponent<Collider> ().enabled = false;
       scale.Append (card.transform
         .DOScale (Vector3.one * pairedScale, pairedTime)
         .SetEase (Ease.InOutBack)
