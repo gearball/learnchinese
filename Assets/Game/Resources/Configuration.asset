@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab73a636a44437a43b367e1d9d607186, type: 3}
+  m_Name: Configuration
+  m_EditorClassIdentifier: 
+  flipForwardDistance: 0.5
+  flipScale: 0.2
+  flipDuration: 0.5
+  cardsData:
+  - name: Apple
+    sprObject: {fileID: 21300000, guid: 403162304d5edce49b9c265023b5518b, type: 3}
+    sprPinyin: {fileID: 21300000, guid: 01fed1b1c61aa8e408e2a9942c5cc309, type: 3}
+    sprChinese: {fileID: 21300000, guid: a4ecd0c2f5822a442bbec17b47d0d9fa, type: 3}
+    clip: {fileID: 8300000, guid: 9a0bcc9339e732849b33479c0dc85fe5, type: 3}
+  - name: Pear
+    sprObject: {fileID: 21300000, guid: 1b16153f5c266184fa0ca2aa998bb62f, type: 3}
+    sprPinyin: {fileID: 21300000, guid: 83755db888dac84488e447edd3b67833, type: 3}
+    sprChinese: {fileID: 21300000, guid: 7a0206e881246b54590ccd89e5111759, type: 3}
+    clip: {fileID: 8300000, guid: cfea2712f1687e6449c19d45f3abdad3, type: 3}
+  - name: Watermelon
+    sprObject: {fileID: 21300000, guid: c508052eb2446fb4c813d309ef1bc652, type: 3}
+    sprPinyin: {fileID: 21300000, guid: 7c1622f0143661f47afc6fdaf992831a, type: 3}
+    sprChinese: {fileID: 21300000, guid: d78610bbca4f7bf4c89ac3432a1ee5a7, type: 3}
+    clip: {fileID: 8300000, guid: eb4ebee70707b274e849c11522b57577, type: 3}
+  - name: Rice
+    sprObject: {fileID: 21300000, guid: c3f702153f998994abbbba1fba687737, type: 3}
+    sprPinyin: {fileID: 21300000, guid: bc6d098d12ff69e44ac1c20ea1a3c29d, type: 3}
+    sprChinese: {fileID: 21300000, guid: fb65a72add1e8934485141c1e2bb5f98, type: 3}
+    clip: {fileID: 8300000, guid: 45d2ed3609b807141bd9f60829618cc6, type: 3}
+  - name: Satay
+    sprObject: {fileID: 21300000, guid: fcab516596660094689691ad819b4b99, type: 3}
+    sprPinyin: {fileID: 21300000, guid: 2d424fba57ebc5f42be8f2b295c35015, type: 3}
+    sprChinese: {fileID: 21300000, guid: 5dbad5b098b1c4e4eb93a04015d2c201, type: 3}
+    clip: {fileID: 8300000, guid: e0bfa54f17e08b24eb64eb96ffa25010, type: 3}
+  - name: Soup
+    sprObject: {fileID: 21300000, guid: 4f935ecaf55afeb46baf7868739a1e9a, type: 3}
+    sprPinyin: {fileID: 21300000, guid: 7dac370436161f94b8e0834fadf3df10, type: 3}
+    sprChinese: {fileID: 21300000, guid: d898527a6d662b6428ad73cf42ef449c, type: 3}
+    clip: {fileID: 8300000, guid: ce21db65565a5f04696d2ac1ed997862, type: 3}
